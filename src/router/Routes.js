@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 
 const Routes = () => {
   return (
-    <Stack.Navigator initialRouteName={screenNames.TASK}>
+    <Stack.Navigator initialRouteName={screenNames.USERLIST}>
       <Stack.Screen
         name={screenNames.USERDETAIL}
         component={UserDetailScreen}

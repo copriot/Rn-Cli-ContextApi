@@ -10,8 +10,14 @@ export const UserProvider = ({children}) => {
   useEffect(() => {
     axios
       .get('https://jsonplaceholder.typicode.com/users')
-      .then(response => console.log(response.data))
-      .catch(err => console.log(err.message));
+      .then(response => {
+        setUsers(response.data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.log(err.message);
+        setLoading(false);
+      });
   }, []);
 
   return (
